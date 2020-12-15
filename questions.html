@@ -15,27 +15,29 @@
   <body>
     <header>
       <nav class="navbar navbar-light bg-light">
-        <a id='highscore' href="highscores.html">View Highscores</a>
+        <a id="highscore" href="highscores.html">View Highscores</a>
         <span class="float-right timer">
-            Time/Score: 75
+          Time/Score:
+          <span id="countdown">75</span>
+        </span>
       </nav>
     </header>
     <main class="container">
       <div class="row">
         <div class="col-md-8">
           <div class="card">
-            <div class="card-body text-center">
-              <h5 class="card-title">Javascript Quiz Challenege</h5>
-              <p class="card-text">
-                Try to answer the following Javascript&#45;related questions within
-                the time limit. Keep in mind that incorrect answers will
-                penalize your score score&#47;time by 10 seconds.
-              </p>
-              <a href="questions.html" class="btn btn-primary startQuiz">Start Quiz</a>
+            <div class="card-body" id="quiz-div">
+              <h5 class="card-title question"></h5>
+              <div>
+                <ul class="listOfOptions">
+                  <!-- Buttons for each option are dynamically created here via script.js -->
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

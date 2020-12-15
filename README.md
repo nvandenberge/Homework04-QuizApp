@@ -1,11 +1,11 @@
 # Homework04-QuizApp
-A quiz app that contains 5 javascript-related questions.
+A quiz app that contains 5 Javascript-related questions.
 
 ## Technologies
  - HTML5
  - CSS
  - Javascript
- - Bootstrap
+ - Bootstrap v4.5.3
  - VSCode
  - Git
 
