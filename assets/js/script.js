@@ -5,12 +5,13 @@ const optionsList = document.querySelector(".listOfOptions");
 const container = document.querySelector(".container");
 const submitForm = document.getElementById("form-body");
 const finishedHeader = document.getElementById("finishedHeader");
+const submitScore = document.querySelector('.submitScore');
+const initials = document.getElementById('initials');
 let seconds = document.getElementById("countdown").textContent;
 
 // Setting initial values
 let currentQuestion = {};
 let questionCounter = 0;
-let scores = [];
 
 // Object containing quiz questions and answers
 const quizQuestions = [
@@ -130,6 +131,22 @@ function displayForm() {
   let finalScoreText = document.createElement("li");
   finalScoreText.textContent = `Your final score is: ${seconds}`;
   finishedHeader.append(finalScoreText);
+  addScores();
+}
+
+// Function to add initials and score to localStorage
+function addScores() {
+  submitScore.addEventListener('click', function() {
+    // Validation to make sure user enters initals between 1-3 characters
+      if(initials.value === '' || initials.value.length > 3) {
+          alert('Please enter your initials using 3 letters or less to submit your score')
+          return
+      }
+     let scores = JSON.parse(localStorage.getItem("scores")) || [];
+     let score = initials.value + ' - ' + seconds;
+     scores.push(score)
+     localStorage.setItem('scores', JSON.stringify(scores))
+  })
 }
 
 startQuiz();
