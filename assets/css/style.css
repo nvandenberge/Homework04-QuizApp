@@ -5,3 +5,29 @@
 .row {
     justify-content: center;
 }
+
+ul,
+ol {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #7404b5;
+  color: white;
+  border-radius: 5px;
+}
+
+#finishedHeader > li {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.checkAnswer {
+  text-align: center;
+  font-weight: 600;
+}
