@@ -1,9 +1,9 @@
 .container {
-    margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .row {
-    justify-content: center;
+  justify-content: center;
 }
 
 ul,
@@ -30,4 +30,17 @@ button {
 .checkAnswer {
   text-align: center;
   font-weight: 600;
+}
+
+table {
+  min-width: 230px;
+}
+
+table tr {
+  border: 1px solid black;
+}
+
+th, td {
+  border-right: 1px solid black;
+  padding: 5px;
 }
