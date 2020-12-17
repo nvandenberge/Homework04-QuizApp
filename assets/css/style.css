@@ -2,6 +2,7 @@
   margin-top: 4rem;
 }
 
+/* Centers content on page */
 .row {
   justify-content: center;
 }
@@ -16,10 +17,26 @@ li {
   margin-bottom: 10px;
 }
 
-button {
+/* color and style for all buttons */
+button, .submitScore {
   background-color: #7404b5;
   color: white;
-  border-radius: 5px;
+  border-radius: 5px !important;
+}
+
+button:hover {
+  box-shadow: 2px 5px 10px black;
+}
+
+.startQuizBtn {
+  color: white;
+  padding: 15px;
+}
+
+/* keeps 'Start Quiz' button text color from turning blue on hover */
+.startQuizBtn:hover {
+  text-decoration: none;
+  color: white;
 }
 
 #finishedHeader > li {
@@ -27,20 +44,34 @@ button {
   font-weight: 400;
 }
 
+/* centers answer selection feedback text */
 .checkAnswer {
   text-align: center;
   font-weight: 600;
 }
 
+/* Setting width of table */
 table {
   min-width: 230px;
 }
-
+/* outside border for table */
 table tr {
   border: 1px solid black;
 }
 
-th, td {
+/* inner table borders */
+th,
+td {
   border-right: 1px solid black;
   padding: 5px;
+}
+
+/* Add red color to incorrect selections */
+.incorrect-answer {
+  color: red;
+}
+
+/* Add green color to correct selections */
+.correct-answer {
+  color: green;
 }

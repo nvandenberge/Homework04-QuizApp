@@ -71,7 +71,7 @@ function startQuiz() {
   getNewQuestion();
 }
 
-// Function that retieves a new question once an answer is clicked
+// Function that validates quiz length & retieves a new question once an answer is clicked
 function getNewQuestion() {
   if (questionCounter >= quizQuestions.length) {
     displayForm();
@@ -98,16 +98,25 @@ function getOptions() {
 
     // Event listener for answer option buttons
     option.addEventListener("click", function (e) {
+      // Disables button after click to avoid double-clicking answer
+      option.disabled = true;
+      // Reducing button opacity when selected for user feedback
+      option.style.opacity = "0.5";
+
       let selectedAnswer = e.target.value;
       let checkAnswer = document.createElement("div");
       checkAnswer.classList.add("checkAnswer");
       // If selected answer is correct, display CORRECT!
       if (selectedAnswer === currentQuestion.correctAnswer) {
+        // Adding class so "CORRECT!" displays in green font
+        checkAnswer.classList.add("correct-answer");
         checkAnswer.textContent = "CORRECT!";
         container.append(checkAnswer);
       }
       // If selected answer is wrong, display INCORRECT! and subtract 10 seconds from timer/score
       if (selectedAnswer !== currentQuestion.correctAnswer) {
+        // Adding class so "INCORRECT!" displays in red font
+        checkAnswer.classList.add("incorrect-answer");
         checkAnswer.textContent = "INCORRECT!";
         container.append(checkAnswer);
         seconds = seconds - 10;
@@ -144,6 +153,7 @@ function addLocalStorage() {
       );
       return;
     }
+    // Seperating score and initials so I can sort scoresArr by highest score
     const scoresArr = JSON.parse(localStorage.getItem("scores")) || [];
     scoresArr.push({
       score: seconds,

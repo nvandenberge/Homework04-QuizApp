@@ -1,17 +1,25 @@
 # Homework04-QuizApp
-A quiz app that contains 5 Javascript-related questions. Click the 'Start Quiz' button to start the quiz. Once the quiz is completed, users may input their intials to save their score to the highscores list. 
+
+A quiz app that contains 5 Javascript-related questions. Click the 'Start Quiz' button to start the quiz. Once the quiz is completed, users may input their intials to save their score to the highscores list.
 
 ## Technologies
- - HTML5
- - CSS
- - Javascript
- - Bootstrap v4.5.3
- - VSCode
- - Git
+
+- HTML5
+- CSS
+- Javascript
+- Bootstrap v4.5.3
+- VSCode
+- Git
 
 ## Mock-Up
 
-## Demo
-- https://nvandenberge.github.io/Homework04-QuizApp/
+- Homepage
+![Home Page](./assets/images/HomePage.png)
+- Quiz question page
+![Quiz Questions Page](./assets/images/QuizPage.png)
+- Highscores page
+![Highscores Page](./assets/images/HighscoresPage.png)
 
-## Planned Enhancements
+## Demo
+
+- https://nvandenberge.github.io/Homework04-QuizApp/
