@@ -22,4 +22,4 @@ A quiz app that contains 5 Javascript-related questions. Click the 'Start Quiz' 
 
 ## Demo
 
-- https://nvandenberge.github.io/Homework04-QuizApp/
+- https://nvandenberge.github.io/JavascriptQuizApp/
