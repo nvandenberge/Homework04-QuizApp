@@ -1,4 +1,4 @@
-# Homework04-QuizApp
+# JavascriptQuizApp
 
 A quiz app that contains 5 Javascript-related questions. Click the 'Start Quiz' button to start the quiz. Once the quiz is completed, users may input their intials to save their score to the highscores list.
 
